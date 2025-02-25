@@ -24,36 +24,38 @@
       text-align: center;
     }
     
-    section img {
-      max-width: 100%;
-      max-height: 500px;
-      margin-top: 20px;
-    }
-    
-    .image-container {
+     .carousel-container {
+      position: relative;
       max-width: 500px;
-      overflow: scroll;
-      white-space: nowrap;
+      margin: auto;
+      overflow: hidden;
     }
-    
-    .image-container img {
-      display: inline-block;
+    .carousel {
+      display: flex;
+      position: relative;
+    }
+    .carousel img {
       max-width: 500px;
       max-height: 500px;
-      margin-right: 10px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    .carousel img.active {
+      opacity: 1;
     }
-    footer img {
-      max-width: 500px;
-      max-height: 500px;
-      margin-top: 20px;
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
     }
+    .prev { left: 0; }
+    .next { right: 0; }
   </style>
 </head>
 <body>
@@ -65,34 +67,47 @@
   
   <section>
     <h2>Obsessed with Flight</h2>
-    <p>From birds to rocket propulsion, the ability to soar through the air is the end-all-be-all of abilities.
-       The entity that can do this most graciously and effortlessly will find itself with a great advantage in terms of impressiveness and logistical superiority.
-       It has been my goal to reach the razor's edge of industry, technology, and theory in all aspects associated with flight.
-       Current wing airfoil designs are decades old and new ideas are required to unite sub-orbit flight technology with space exploration.
-       Currently I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter.
-       I am greatful to have the opportunity to participate in research as an undergrad with the University of Texas at San Antonio's physics department.
-    </p>
+    <p>From birds to rocket propulsion, the ability to soar through the air...</p>
     <div class="carousel-container">
-      <button class="prev" onclick="moveSlide(-1, 0)">&#10094;</button>
-      <div class="carousel" id="carousel0">
-        <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel" id="carousel">
+        <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment" class="active">
         <img src="assets/img/flight1.jpg" alt="Flight Image 1">
         <img src="assets/img/flight2.jpg" alt="Flight Image 2">
         <img src="assets/img/flight3.jpg" alt="Flight Image 3">
         <img src="assets/img/flight4.jpg" alt="Flight Image 4">
       </div>
-      <button class="next" onclick="moveSlide(1, 0)">&#10095;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </section>
 
   <script>
-    let index = [0, 0]; // Track indexes for each carousel
-    function moveSlide(direction, carouselNum) {
-      const carousels = [document.getElementById("carousel0")]; // Add more IDs as needed
-      const totalImages = carousels[carouselNum].children.length;
-      index[carouselNum] = (index[carouselNum] + direction + totalImages) % totalImages;
-      carousels[carouselNum].style.transform = `translateX(${-index[carouselNum] * 500}px)`;
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 0;
+      const images = document.querySelectorAll(".carousel img");
+      const totalImages = images.length;
+
+      function updateCarousel() {
+        images.forEach((img, index) => {
+          img.classList.remove("active");
+          if (index === currentIndex) {
+            img.classList.add("active");
+          }
+        });
+      }
+
+      function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + totalImages) % totalImages;
+        updateCarousel();
+      }
+
+      function autoSlide() {
+        moveSlide(1);
+        setTimeout(autoSlide, 3000);
+      }
+
+      setTimeout(autoSlide, 3000);
+    });
   </script>
 
   <section>
