@@ -11,14 +11,7 @@
       margin: 0;
       padding: 0;
     }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
+       
     section {
       padding: 40px;
       text-align: center;
@@ -96,12 +89,60 @@
     .next { right: 0; }
   </style>
 </head>
+<head>
+  <style>
+    body {
+      font-family: 'Futura', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/img/AmericanFlag.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7;
+      z-index: -1;
+    }
+
+    h1, p {
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
 <body>
   <header>
     <h1>Kenneth Mikolaichik</h1>
     <p>"Dare to dream boldly, persevering against all odds towards creation."</p>
     <p>We must not stop, only bravely forward into the unknown.</p>
   </header>
+</body>
+
   
   <section>
     <h2>Obsessed with Flight</h2>
@@ -114,7 +155,7 @@
 	  	</p>
     <div class="carousel-container">
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <div class="carousel" id="carousel">
+      <div class="carousel" id="carousel1">
         <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment" class="active">
         <img src="assets/img/IMG_0246.JPEG" alt="Flight Image 1">
         <img src="assets/img/image5 fluorescence of laser spot and nanowire 1.png" alt="Flight Image 2">
@@ -156,6 +197,7 @@
 
   <section>
     <h2>Mystified by Machine Intelligence</h2>
+	<p><a href="https://github.com/kennethmikolaichik/Regis#regis-quadruped-robot">Regis - Intelligent Quadbot</a></p>
     <p>In what stretch of code does a machine gain the ability to learn? If a machine becomes self aware, should we destroy it or nurture it?
        Answers to these questions are far more pragmatic than surface level consideration would suggest.
        If you are reading this then the ability to experiment with this technology is literally at your fingertips.
@@ -166,8 +208,18 @@
        I am always on the lookout for collaborators with this project so please, if you are seriously interested, do not hesitate to contact me no matter what your experience level is.
        The main programming language is python running within Linux on a Raspberry Pi board coupled to a solid state drive.
     </p>
-    <img src="assets/img/Regis_Speaks!_5.10.2023.jpg" alt="Regis at Home Workstation">
-    <p><a href="https://github.com/kennethmikolaichik/Regis#regis-quadruped-robot">Regis - Intelligent Quadbot</a></p>
+
+     <div class="carousel-container">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel" id="carousel2">
+        <img src="assets/img/Regis_Speaks!_5.10.2023.jpg" alt="Regis at Home Workstation" class="active">
+        <img src="assets/img/Head to Chassis incorporation!.jpg" alt="Flight Image 1">
+        <img src="assets/img/Regis v0.0 CAD Orthographic Views.png" alt="Flight Image 2">
+        <img src="assets/img/IMG_1306.png" alt="Flight Image 3">
+        <img src="assets/img/IMG_1268.png" alt="Flight Image 4">
+      </div>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
   </section>
 
   <section>
