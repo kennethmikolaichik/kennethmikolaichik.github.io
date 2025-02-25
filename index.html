@@ -61,20 +61,27 @@
       margin: auto;
       overflow: hidden;
     }
-    .carousel {
-      display: flex;
-      position: relative;
-    }
-    .carousel img {
-      max-width: 500px;
-      max-height: 500px;
-      position: absolute;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .carousel img.active {
-      opacity: 1;
-    }
+	.carousel {
+	  display: flex;
+	  position: relative;
+	  width: 100%;
+	  height: 500px; /* Ensure it has a fixed height */
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.carousel img {
+	  max-width: 500px;
+	  max-height: 500px;
+	  position: absolute;
+	  opacity: 0;
+	  transition: opacity 1s ease-in-out;
+	}
+
+	.carousel img.active {
+	  opacity: 1;
+	}
+
     .prev, .next {
       position: absolute;
       top: 50%;
@@ -187,7 +194,7 @@
   <footer>
     <h3>Contact</h3>
     <p><a href="https://www.linkedin.com/in/kenneth-mikolaichik">Contact me via Linkedin</a></p>
-    <img src="assets/img/IMG_1348.png" alt="Contact Image 1">
+    <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1">
   </footer>
 </body>
 </html>
