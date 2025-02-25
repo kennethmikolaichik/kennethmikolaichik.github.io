@@ -72,9 +72,28 @@
        Currently I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter.
        I am greatful to have the opportunity to participate in research as an undergrad with the University of Texas at San Antonio's physics department.
     </p>
-    <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment">
-    <p><a href="https://github.com/kennethmikolaichik/Magnus-Wheel/tree/main">Magnus Effect Based Flying Contraption</a></p>
+    <div class="carousel-container">
+      <button class="prev" onclick="moveSlide(-1, 0)">&#10094;</button>
+      <div class="carousel" id="carousel0">
+        <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment">
+        <img src="assets/img/flight1.jpg" alt="Flight Image 1">
+        <img src="assets/img/flight2.jpg" alt="Flight Image 2">
+        <img src="assets/img/flight3.jpg" alt="Flight Image 3">
+        <img src="assets/img/flight4.jpg" alt="Flight Image 4">
+      </div>
+      <button class="next" onclick="moveSlide(1, 0)">&#10095;</button>
+    </div>
   </section>
+
+  <script>
+    let index = [0, 0]; // Track indexes for each carousel
+    function moveSlide(direction, carouselNum) {
+      const carousels = [document.getElementById("carousel0")]; // Add more IDs as needed
+      const totalImages = carousels[carouselNum].children.length;
+      index[carouselNum] = (index[carouselNum] + direction + totalImages) % totalImages;
+      carousels[carouselNum].style.transform = `translateX(${-index[carouselNum] * 500}px)`;
+    }
+  </script>
 
   <section>
     <h2>Mystified by Machine Intelligence</h2>
