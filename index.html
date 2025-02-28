@@ -1,129 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenneth Mikolaichik's Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Mikolaichik's Webpage</title>
 </head>
 
-<link rel="stylesheet" href="https://github.com/kennethmikolaichik/kennethmikolaichik.github.io/style.css">
-<link rel="javascript" href="https://github.com/kennethmikolaichik/kennethmikolaichik.github.io/java.js">
-
 <body>
-
-  <div style="display: flex; align-items: center;">
-    <img src="assets/img/Headshot.jpg" alt="Headshot 2025" style="width: 100%; max-width: 200px; height: auto; margin-right: 20px;">
-    <div>
-        <h1>Kenneth Mikolaichik</h1>
-        <p>Dare to dream boldly, persevering against all odds towards creation.</p>
+    <div style="display: flex; align-items: center; background: #333; color: white; padding: 20px;">
+        <img src="assets/img/Headshot.jpg" alt="Headshot 2025" style="width: 100%; max-width: 200px; height: auto; margin-right: 20px;">
+        <div>
+            <h1>Kenneth Mikolaichik</h1>
+            <p>Dare to dream boldly, persevering against all odds towards creation.</p>
+        </div>
     </div>
-</div>
+</body>
+
+
 <hr>
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px;">
-  <!-- First Image Section -->
-  <div style="text-align: center; max-width: 45%;">
-    <h2>Obsessed with Flight</h2>  
-    <a href="https://example1.com" target="_blank">
-          <img id="image1" src="your-image1.jpg" alt="Description 1" style="width: 100%; max-width: 400px; height: auto;">
-      </a>
-      <p>Humanity will never fully becoming space-fairing without an economical solution to lifting mass beyond earths gravity.
-      <p>I believe new and novel approaches are needed to unite sub-orbital airfoil lift technology with space exploration propulsion methods.</p>
-      <p>I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter to this end.</p>
-  </div>
+    <!-- First Image Section -->
+    <div style="text-align: center; max-width: 45%;">
+        <h2>Obsessed with Flight</h2>
+        <a href="https://example1.com" target="_blank">
+            <img id="image1" src="your-image1.jpg" alt="Description 1" style="width: 100%; max-width: 400px; height: auto;">
+        </a>
+        <p>Humanity will never fully becoming space-fairing without an economical solution to lifting mass beyond earths gravity.
+        <p>I believe new and novel approaches are needed to unite sub-orbital airfoil lift technology with space exploration propulsion methods.</p>
+        <p>I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter to this end.</p>
+    </div>
 
-  <!-- Second Image Section -->
-  <div style="text-align: center; max-width: 45%;">
-    <h2>Mystified by Machine Intelligence</h2>  
-    <a href="https://example2.com" target="_blank">
-          <img id="image2" src="your-image2.jpg" alt="Description 2" style="width: 100%; max-width: 400px; height: auto;">
-      </a>
-      <p>In what stretch of code does a machine gain the ability to learn?</p>
-      <p>If a machine becomes self aware, should we destroy it or nurture it?</p>       
-      <p>I have begun investigations into machine learning by building a functioning quadrupedal robot. Equipped with machine vision via an infared capable camera, a gyroscope/accelerometer package. The main programming language is python running within Linux on a Raspberry Pi board coupled to a solid state drive.</p>
-  </div>
+    <!-- Second Image Section -->
+    <div style="text-align: center; max-width: 45%;">
+        <h2>Mystified by Machine Intelligence</h2>
+        <a href="https://example2.com" target="_blank">
+            <img id="image2" src="your-image2.jpg" alt="Description 2" style="width: 100%; max-width: 400px; height: auto;">
+        </a>
+        <p>In what stretch of code does a machine gain the ability to learn?</p>
+        <p>If a machine becomes self aware, should we destroy it or nurture it?</p>
+        <p>I have begun investigations into machine learning by building a functioning quadrupedal robot. Equipped with machine vision via an infared capable camera. The main programming language is python running within a Linux environment on a Raspberry Pi.</p>
+    </div>
 </div>
 
 <script>
-  // Arrays to store images for each section
-  const images1 = [
-      "assets/img/20230626_161631.jpg",  // Image 1 for the first section
-      "assets/img/IMG_0246.JPEG",  // Image 2 for the first section
-      "assets/img/image5 fluorescence of laser spot and nanowire 1.png",  // Image 3 for the first section
-      "assets/img/IMG_0236.JPEG"   // Image 4 for the first section
-  ];
+    // Arrays to store images for each section
+    const images1 = [
+        "assets/img/20230626_161631.jpg",  // Image 1 for the first section
+        "assets/img/IMG_0246.JPEG",  // Image 2 for the first section
+        "assets/img/image5 fluorescence of laser spot and nanowire 1.png",  // Image 3 for the first section
+        "assets/img/IMG_0236.JPEG"   // Image 4 for the first section
+    ];
 
-  const images2 = [
-      "assets/img/Regis_Speaks!_5.10.2023.jpg",  // Image 1 for the second section
-      "assets/img/Head to Chassis incorporation!.jpg",  // Image 2 for the second section
-      "assets/img/Regis v0.0 CAD Orthographic Views.png",  // Image 3 for the second section
-      "assets/img/IMG_1268.jpg"   // Image 4 for the second section
-  ];
+    const images2 = [
+        "assets/img/Regis_Speaks!_5.10.2023.jpg",  // Image 1 for the second section
+        "assets/img/Head to Chassis incorporation!.jpg",  // Image 2 for the second section
+        "assets/img/Regis v0.0 CAD Orthographic Views.jpg",  // Image 3 for the second section
+        "assets/img/IMG_1268.jpg"   // Image 4 for the second section
+    ];
 
-  let currentImageIndex1 = 0; // Start with the first image in the first section
-  let currentImageIndex2 = 0; // Start with the first image in the second section
+    let currentImageIndex1 = 0; // Start with the first image in the first section
+    let currentImageIndex2 = 0; // Start with the first image in the second section
 
-  // Function to cycle images for both sections
-  function cycleImages() {
-      // Get the image elements for both sections
-      const imageElement1 = document.getElementById('image1');
-      const imageElement2 = document.getElementById('image2');
+    // Function to cycle images for both sections
+    function cycleImages() {
+        // Get the image elements for both sections
+        const imageElement1 = document.getElementById('image1');
+        const imageElement2 = document.getElementById('image2');
 
-      // Update each image source with the next image in their respective arrays
-      imageElement1.src = images1[currentImageIndex1];
-      imageElement2.src = images2[currentImageIndex2];
+        // Update each image source with the next image in their respective arrays
+        imageElement1.src = images1[currentImageIndex1];
+        imageElement2.src = images2[currentImageIndex2];
 
-      // Move to the next image for both sections and reset to the first image after the last one
-      currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
-      currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
-  }
+        // Move to the next image for both sections and reset to the first image after the last one
+        currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+        currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+    }
 
-  // Set the images to cycle every 4 seconds (4000 milliseconds)
-  setInterval(cycleImages, 4000);
+    // Set the images to cycle every 4 seconds (4000 milliseconds)
+    setInterval(cycleImages, 4000);
 </script>
 
 <hr>
 <div style="text-align: center;">
     <h2>Approach Magazine, 2016, Volume 61, No. 3</h2>
-	  <h3><a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/">Approach Magazine</a></h3>
+    <h3><a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/">Approach Magazine</a></h3>
     <img src="assets/img/ApproachBlurb_2016_vol61_No3.jpg" alt="Approach Mgzn 2016" style="width: 100%; max-width: 800px; border-radius: 20px;">
 </div>
 
 <hr>
 <section>
-  <h2>Publication(s)</h2>
-     <p>
-       <i>Probing structural alterations in shock-compressed GaAs</i>. <i>Journal of Materials Chemistry</i>.(1) Bhowmick, M., Sellan, D., Johnson, K., Mikolaichik, K., Zhou, X., Das, A., Ramkumar, C., Magill, B., Smith, N., & Khodaparast, G. (2025).
-     </p>
+    <h2>Publication(s)</h2>
+    <p>
+        <strong>Probing structural alterations in shock-compressed GaAs</strong>. <i>Journal of Materials Chemistry</i>. (1) Bhowmick, M., Sellan, D., Johnson, K., Mikolaichik, K., Zhou, X., Das, A., Ramkumar, C., Magill, B., Smith, N., & Khodaparast, G. (2025).
+    </p>
 </section>
 
-  <hr>
-  <section>
+<hr>
+<div style="text-align: center;">
+    <img src="ARL Poster-Kenneth Mikolaichik.jpg" alt="Shock Compression Research" style="width: 100%; max-width: 800px">
+</div>
+
+<hr>
+<section>
     <h2>Autobiography</h2>
-    <p>My name is Kenneth Mikolaichik, a Texas native born 1990.
-       I grew up in Austin the youngest of three and only boy, son of a chemist and a seamstress.
-       I developed a knack for repairing every day things at a young age.
-       Ever hungry for more knowledge and spurred on by a desire to live comfortably, I attended the Liberal Arts and Science Academy High School in Austin.
-       After High School I worked a plethera of temporary and remedial positions looking for my place in societry.
-       I attended ITT tech in pursuit of an electrical engineering degree where I made the dean's list several times.
-       While still attending online, I joined the US Navy and received training as an aircraft mechanic in Pensacola Florida, where I achieved top of my class and class leader.
-       I received an award and was promoted immediately to E-4.
-       Within two years of my enlistment date I was again promoted to E-5 wherein I became the second shift supervisor of ten F-18 Superhornets for the airframes shop of VFA-151.
-       Upon exiting my military contact I resided in California for 2 years restoring dead and abandoned F-18’s that had not flown in years, a very rewarding job. 
-       It was around this time that I completed an associates in aeronautics from Embry Riddle. 
-       Missing my family, and longing for those Texas sunsets, I moved to San Antonio - military City USA. 
-       I worked for Northrop Grumman for two years as a level III structural mechanic and then decided that was simply not enough; I needed to contribute to something more. 
-       This was when I decided to pursue a physics degree at the University of Texas and seriously investigate new approaches to lift and automated robotic repair.
+    <p>
+        My name is Kenneth Mikolaichik, a Texas native born 1990.
+        I grew up in Austin the youngest of three and only boy, son of a chemist and a seamstress.
+        I developed a knack for repairing every day things at a young age.
+        Ever hungry for more knowledge and spurred on by a desire to live comfortably, I attended the Liberal Arts and Science Academy High School in Austin.
+        After High School I worked a plethera of temporary and remedial positions looking for my place in societry.
+        I attended ITT tech in pursuit of an electrical engineering degree where I made the dean's list several times.
+        While still attending online, I joined the US Navy and received training as an aircraft mechanic in Pensacola Florida, where I achieved top of my class and class leader.
+        I received an award and was promoted immediately to E-4.
+        Within two years of my enlistment date I was again promoted to E-5 wherein I became the second shift supervisor of ten F-18 Superhornets for the airframes shop of VFA-151.
+        Upon exiting my military contact I resided in California for 2 years restoring dead and abandoned F-18’s that had not flown in years, a very rewarding job.
+        It was around this time that I completed an associates in aeronautics from Embry Riddle.
+        Missing my family, and longing for those Texas sunsets, I moved to San Antonio - military City USA.
+        I worked for Northrop Grumman for two years as a level III structural mechanic and then decided that was simply not enough; I needed to contribute to something more.
+        This was when I decided to pursue a physics degree at the University of Texas and seriously investigate new approaches to lift and automated robotic repair.
     </p>
 
 
-  <footer style="background: #333;color: white; padding: 20px; text-align: center; border-radius: 50px; width: 50%; margin: 20px auto;">
-    <h2>Contact</h2>
-    <a href="https://www.linkedin.com/in/kenneth-mikolaichik" 
-       style="display: inline-block; background: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-       Contact me via LinkedIn
-    </a>
-    <div style="margin-top: 15px;">
-        <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1" style="width: 200px; border-radius: 20px;">
-    </div>
-  </footer>
+    <footer style="background: #333;color: white; padding: 20px; text-align: center; border-radius: 50px; width: 50%; margin: 20px auto;">
+        <h2>Contact</h2>
+        <a href="https://www.linkedin.com/in/kenneth-mikolaichik"
+           style="display: inline-block; background: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Contact me via LinkedIn
+        </a>
+        <div style="margin-top: 15px;">
+            <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1" style="width: 200px; border-radius: 20px;">
+        </div>
+    </footer>
+</html>    
