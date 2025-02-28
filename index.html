@@ -1,235 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Kenneth Mikolaichik's Webpage</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* CSS styles for the webpage */
-   body {
-      margin: 5px;
-      padding: 0;
-    }
-    
-	section1 {
-      padding: 40px;
-      text-align: left;
-	  text-indent: 20px;
-    }
-	  
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-    
-    section img {
-      max-width: 100%;
-      max-height: 500px;
-      margin-top: 20px;
-    }
-    
-    .image-container {
-      max-width: 500px;
-      overflow: scroll;
-      white-space: nowrap;
-    }
-    
-    .image-container img {
-      display: inline-block;
-      max-width: 500px;
-      max-height: 500px;
-      margin-right: 10px;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    footer img {
-      max-width: 500px;
-      max-height: 500px;
-      margin-top: 20px;
-    }
-    
-     .carousel-container {
-      position: relative;
-      max-width: 500px;
-      margin: auto;
-      overflow: hidden;
-    }
-	.carousel {
-	  display: flex;
-	  position: relative;
-	  width: 100%;
-	  height: 500px; /* Ensure it has a fixed height */
-	  justify-content: center;
-	  align-items: center;
-	}
-
-	.carousel img {
-	  max-width: 500px;
-	  max-height: 500px;
-	  position: absolute;
-	  opacity: 0;
-	  transition: opacity 1s ease-in-out;
-	}
-
-	.carousel img.active {
-	  opacity: 1;
-	}
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-    .prev { left: 0; }
-    .next { right: 0; }
-
-    body {
-      font-family: 'Futura', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('assets/img/AmericanFlag.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.7;
-      z-index: -1;
-    }
-
-    h1, p {
-      margin: 0;
-      padding: 10px 0;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-  </style>
+  <title>Kenneth Mikolaichik's Webpage</title>
 </head>
 
+<link rel="stylesheet" href="https://github.com/kennethmikolaichik/kennethmikolaichik.github.io/style.css">
+<link rel="javascript" href="https://github.com/kennethmikolaichik/kennethmikolaichik.github.io/java.js">
+
 <body>
-  <header>
-    <h1>Kenneth Mikolaichik</h1>
-    <p>Dare to dream boldly, persevering against all odds towards creation.</p>
-  </header>
-</body>
 
- <section1>
-   <h2>Publication(s)</h2>
-    	<p>
-			(1) Bhowmick, M., Sellan, D., Johnson, K., Mikolaichik, K., Zhou, X., Das, A., Ramkumar, C., Magill, B., Smith, N., & Khodaparast, G. (2025). <i>Probing structural alterations in shock-compressed GaAs</i>. <i>Journal of Materials Chemistry</i>.
-	  	</p>
- </section1>
-<hr>
-  <section>
-    <h2>Obsessed with Flight</h2>
-    	<p>From birds to rocket propulsion, the ability to soar through the air is the end-all-be-all of abilities.
-       The entity that can do this most graciously and effortlessly will find itself with a great advantage in terms of impressiveness and logistical superiority.
-       It has been my goal to reach the razor's edge of industry, technology, and theory in all aspects associated with flight.
-       Current wing airfoil designs are decades old and new ideas are required to unite sub-orbit flight technology with space exploration.
-       Currently I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter.
-       I am greatful to have the opportunity to participate in research as an undergrad with the University of Texas at San Antonio's physics department.
-	  	</p>
-    <div class="carousel-container">
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-
-      <div class="carousel" id="carousel1">
-        <img src="assets/img/20230626_161631.jpg" alt="Laser Experiment" class="active">
-        <img src="assets/img/IMG_0246.JPEG" alt="Flight Image 1">
-        <img src="assets/img/image5 fluorescence of laser spot and nanowire 1.png" alt="Flight Image 2">
-        <img src="assets/img/IMG_0236.JPEG" alt="Flight Image 3">
-        <img src="assets/img/IMG_20230802_172732.jpg" alt="Flight Image 4">
-      </div>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  <div style="display: flex; align-items: center;">
+    <img src="assets/img/Headshot.jpg" alt="Headshot 2025" style="width: 100%; max-width: 200px; height: auto; margin-right: 20px;">
+    <div>
+        <h1>Kenneth Mikolaichik</h1>
+        <p>Dare to dream boldly, persevering against all odds towards creation.</p>
     </div>
-  </section>
-
-	<script>
-	  document.addEventListener("DOMContentLoaded", function () {
-		let currentIndex = 0;
-		const images = document.querySelectorAll(".carousel img");
-		const totalImages = images.length;
-
-		function updateCarousel() {
-		  images.forEach((img, index) => {
-			img.classList.remove("active");
-			if (index === currentIndex) {
-			  img.classList.add("active");
-			}
-		  });
-		}
-
-		function moveSlide(direction) {
-		  currentIndex = (currentIndex + direction + totalImages) % totalImages;
-		  updateCarousel();
-		}
-
-		function autoSlide() {
-		  moveSlide(1);
-		}
-
-		updateCarousel(); // Ensure first image is visible immediately
-		setInterval(autoSlide, 3000);
-	  });
-	</script>
-	<hr>
-  <section>
-    <h2>Mystified by Machine Intelligence</h2>
-	<p><a href="https://github.com/kennethmikolaichik/Regis#regis-quadruped-robot">Regis - Intelligent Quadbot</a></p>
-    <p>In what stretch of code does a machine gain the ability to learn? If a machine becomes self aware, should we destroy it or nurture it?
-       Answers to these questions are far more pragmatic than surface level consideration would suggest.
-       If you are reading this then the ability to experiment with this technology is literally at your fingertips.
-       Being far too tantalizing for me to ignore, I have begun my own investigations into machine learning by building a functioning quadrupedal robot.
-       Named 'Regis' after the original developer of the CAD files, the first version of this robot is equipped with machine vision via an infared capable camera.
-       He also contains a gyroscope/accelerometer package and it is my intention to outfit him with multiple vibration sensors to allow him to feel out his environment.
-       While programming is not second nature to me, progress has been steady thanks to the open source community.
-       I am always on the lookout for collaborators with this project so please, if you are seriously interested, do not hesitate to contact me no matter what your experience level is.
-       The main programming language is python running within Linux on a Raspberry Pi board coupled to a solid state drive.
-    </p>
-
-     <div class="carousel-container">
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <div class="carousel" id="carousel2">
-        <img src="assets/img/Regis_Speaks!_5.10.2023.jpg" alt="Regis at Home Workstation" class="active">
-        <img src="assets/img/Head to Chassis incorporation!.jpg" alt="Flight Image 1">
-        <img src="assets/img/Regis v0.0 CAD Orthographic Views.png" alt="Flight Image 2">
-        <img src="assets/img/IMG_1306.jpg" alt="Flight Image 3">
-        <img src="assets/img/IMG_1268.jpg" alt="Flight Image 4">
-      </div>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </section>
+</div>
 <hr>
+
+<div style="display: flex; justify-content: space-between; margin-top: 40px;">
+  <!-- First Image Section -->
+  <div style="text-align: center; max-width: 45%;">
+    <h2>Obsessed with Flight</h2>  
+    <a href="https://example1.com" target="_blank">
+          <img id="image1" src="your-image1.jpg" alt="Description 1" style="width: 100%; max-width: 400px; height: auto;">
+      </a>
+      <p>Humanity will never fully becoming space-fairing without an economical solution to lifting mass beyond earths gravity.
+      <p>I believe new and novel approaches are needed to unite sub-orbital airfoil lift technology with space exploration propulsion methods.</p>
+      <p>I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter to this end.</p>
+  </div>
+
+  <!-- Second Image Section -->
+  <div style="text-align: center; max-width: 45%;">
+    <h2>Mystified by Machine Intelligence</h2>  
+    <a href="https://example2.com" target="_blank">
+          <img id="image2" src="your-image2.jpg" alt="Description 2" style="width: 100%; max-width: 400px; height: auto;">
+      </a>
+      <p>In what stretch of code does a machine gain the ability to learn?</p>
+      <p>If a machine becomes self aware, should we destroy it or nurture it?</p>       
+      <p>I have begun investigations into machine learning by building a functioning quadrupedal robot. Equipped with machine vision via an infared capable camera, a gyroscope/accelerometer package. The main programming language is python running within Linux on a Raspberry Pi board coupled to a solid state drive.</p>
+  </div>
+</div>
+
+<script>
+  // Arrays to store images for each section
+  const images1 = [
+      "assets/img/20230626_161631.jpg",  // Image 1 for the first section
+      "assets/img/IMG_0246.JPEG",  // Image 2 for the first section
+      "assets/img/image5 fluorescence of laser spot and nanowire 1.png",  // Image 3 for the first section
+      "assets/img/IMG_0236.JPEG"   // Image 4 for the first section
+  ];
+
+  const images2 = [
+      "assets/img/Regis_Speaks!_5.10.2023.jpg",  // Image 1 for the second section
+      "assets/img/Head to Chassis incorporation!.jpg",  // Image 2 for the second section
+      "assets/img/Regis v0.0 CAD Orthographic Views.png",  // Image 3 for the second section
+      "assets/img/IMG_1268.jpg"   // Image 4 for the second section
+  ];
+
+  let currentImageIndex1 = 0; // Start with the first image in the first section
+  let currentImageIndex2 = 0; // Start with the first image in the second section
+
+  // Function to cycle images for both sections
+  function cycleImages() {
+      // Get the image elements for both sections
+      const imageElement1 = document.getElementById('image1');
+      const imageElement2 = document.getElementById('image2');
+
+      // Update each image source with the next image in their respective arrays
+      imageElement1.src = images1[currentImageIndex1];
+      imageElement2.src = images2[currentImageIndex2];
+
+      // Move to the next image for both sections and reset to the first image after the last one
+      currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+      currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+  }
+
+  // Set the images to cycle every 4 seconds (4000 milliseconds)
+  setInterval(cycleImages, 4000);
+</script>
+
+<hr>
+<div style="text-align: center;">
+    <h2>Approach Magazine, 2016, Volume 61, No. 3</h2>
+	  <h3><a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/">Approach Magazine</a></h3>
+    <img src="assets/img/ApproachBlurb_2016_vol61_No3.jpg" alt="Approach Mgzn 2016" style="width: 100%; max-width: 800px; border-radius: 20px;">
+</div>
+
+<hr>
+<section>
+  <h2>Publication(s)</h2>
+     <p>
+       <i>Probing structural alterations in shock-compressed GaAs</i>. <i>Journal of Materials Chemistry</i>.(1) Bhowmick, M., Sellan, D., Johnson, K., Mikolaichik, K., Zhou, X., Das, A., Ramkumar, C., Magill, B., Smith, N., & Khodaparast, G. (2025).
+     </p>
+</section>
+
+  <hr>
   <section>
     <h2>Autobiography</h2>
     <p>My name is Kenneth Mikolaichik, a Texas native born 1990.
@@ -244,24 +112,18 @@
        Upon exiting my military contact I resided in California for 2 years restoring dead and abandoned F-18’s that had not flown in years, a very rewarding job. 
        It was around this time that I completed an associates in aeronautics from Embry Riddle. 
        Missing my family, and longing for those Texas sunsets, I moved to San Antonio - military City USA. 
-       I worked for Northrop Grumman for two years and then decided that was simply not enough; I needed to contribute to something more. 
-       This was when I decided to pursue a physics degree at the University of Texas and seriously investigate new approaches to lift. 
+       I worked for Northrop Grumman for two years as a level III structural mechanic and then decided that was simply not enough; I needed to contribute to something more. 
+       This was when I decided to pursue a physics degree at the University of Texas and seriously investigate new approaches to lift and automated robotic repair.
     </p>
-	
-<hr>
 
-     <p>Approach Magazine, 2016, Volume 61, No. 3</p>
-	<p><a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/">Approach Magazine</a></p>
-     <img src="assets/img/ApproachBlurb_2016_vol61_No3.jpg" alt="Approach Mgzn 2016">
-  </section>
 
-  <footer style="background: #333; padding: 20px; text-align: center; border-radius: 50px; width: 50%; margin: 20px auto;">
+  <footer style="background: #333;color: white; padding: 20px; text-align: center; border-radius: 50px; width: 50%; margin: 20px auto;">
     <h2>Contact</h2>
     <a href="https://www.linkedin.com/in/kenneth-mikolaichik" 
        style="display: inline-block; background: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
        Contact me via LinkedIn
     </a>
     <div style="margin-top: 15px;">
-        <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1" style="width: 150px; border-radius: 10px;">
+        <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1" style="width: 200px; border-radius: 20px;">
     </div>
-</footer>
+  </footer>
