@@ -1,137 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenneth Mikolaichik's Webpage</title>
-</head>
-
-<body>
-    <div style="display: flex; align-items: center; background: #333; color: white; padding: 20px; padding-right: 10px;">
-        <img src="assets/img/Headshot.jpg" alt="Headshot 2025" style="width: 80%; max-width: 200px; height: auto; margin-right: 20px;">
-        <div style="flex-shrink: 1; max-width: calc(100% - 220px);">
-            <h1 style="font-size: clamp(18px, 5vw, 36px); overflow: hidden; text-overflow: ellipsis;">Kenneth Mikolaichik</h1>
-            <p>Dare to dream boldly, persevering against all odds towards creation.</p>
-        </div>
-    </div>
-</body>
-
-<hr>
-
-<div style="display: flex; justify-content: space-between; margin-top: 40px;">
-    <!-- First Image Section -->
-    <div style="text-align: center; max-width: 45%;">
-        <h2>Obsessed with Flight</h2>
-        <a href="https://sciences.utsa.edu/labs/xuan-zhou/" target="_blank">
-            <img id="image1" src="your-image1.jpg" alt="Lab Images" style="width: 100%; max-width: 400px; height: auto;">
-        </a>
-        <p>Humanity will never fully become space-fairing without an economical solution to lifting mass beyond earths gravity.
-        <p>I believe new and novel approaches are needed to unite sub-orbital airfoil lift technology with space exploration propulsion methods.</p>
-        <p>I am investigating interactions of the electromagnetic spectrum with metamaterials and nano-engineered condensed matter to this end.</p>
-    </div>
-
-    <!-- Second Image Section -->
-    <div style="text-align: center; max-width: 45%;">
-        <h2>Mystified by Machine Intelligence</h2>
-        <a href="https://github.com/kennethmikolaichik/Regis" target="_blank">
-            <img id="image2" src="your-image2.jpg" alt="Robot Images" style="width: 100%; max-width: 400px; height: auto;">
-        </a>
-        <p>In what stretch of code does a machine gain the ability to learn?</p>
-        <p>If a machine becomes self aware, should we destroy it or nurture it?</p>
-        <p>I have begun investigations into machine learning by building a functioning quadrupedal robot. Equipped with machine vision via an infared capable camera. The main programming language is python running within a Linux environment on a Raspberry Pi.</p>
-    </div>
-</div>
-
-<script>
-    // Arrays to store images for each section
-    const images1 = [
-        "assets/img/20230626_161631.jpg",  // Image 1 for the first section
-        "assets/img/IMG_0246.JPEG",  // Image 2 for the first section
-        "assets/img/image5 fluorescence of laser spot and nanowire 1.png",  // Image 3 for the first section
-        "assets/img/IMG_0236.JPEG"   // Image 4 for the first section
-    ];
-
-    const images2 = [
-        "assets/img/Regis_Speaks!_5.10.2023.jpg",  // Image 1 for the second section
-        "assets/img/Head to Chassis incorporation!.jpg",  // Image 2 for the second section
-        "assets/img/Regis v0.0 CAD Orthographic Views.JPG",  // Image 3 for the second section
-        "assets/img/IMG_1268.jpg"   // Image 4 for the second section
-    ];
-
-    let currentImageIndex1 = 0; // Start with the first image in the first section
-    let currentImageIndex2 = 0; // Start with the first image in the second section
-
-    // Function to cycle images for both sections
-    function cycleImages() {
-        // Get the image elements for both sections
-        const imageElement1 = document.getElementById('image1');
-        const imageElement2 = document.getElementById('image2');
-
-        // Update each image source with the next image in their respective arrays
-        imageElement1.src = images1[currentImageIndex1];
-        imageElement2.src = images2[currentImageIndex2];
-
-        // Move to the next image for both sections and reset to the first image after the last one
-        currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
-        currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+﻿<style>
+    :root {
+        --accent: #0d6efd;
+        --bg-soft: #f5f7fb;
+        --border-soft: #dde3f0;
     }
 
-    // Set the images to cycle every 4 seconds (4000 milliseconds)
-    setInterval(cycleImages, 4000);
-</script>
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-<hr>
-<div style="text-align: center;">
-    <h2>Approach Magazine, 2016, Volume 61, No. 3</h2>
-    <h3><a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/">Approach Magazine</a></h3>
-    <img src="assets/img/ApproachBlurb_2016_vol61_No3.jpg" alt="Approach Mgzn 2016" style="width: 100%; max-width: 800px; border-radius: 20px;">
-</div>
+    /* HERO */
 
-<hr>
-<section>
-    <h2>Publication(s)</h2>
-    <p>
-        <strong>Probing structural alterations in shock-compressed GaAs</strong>. <i>Journal of Materials Chemistry</i>. (1) Bhowmick, M., Sellan, D., Johnson, K., Mikolaichik, K., Zhou, X., Das, A., Ramkumar, C., Magill, B., Smith, N., & Khodaparast, G. (2025).
-    </p>
-</section>
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.8rem 1.5rem;
+        margin: 1rem 0 2rem 0;
+        border-radius: 16px;
+        background: radial-gradient(circle at 0 0, #e3f2fd 0, #f5f7fb 50%, #fdfdfd 100%);
+        border: 1px solid var(--border-soft);
+    }
 
-<hr>
-<div style="text-align: center;">
-    <img src="assets/img/ARL Poster-Kenneth Mikolaichik.jpg" alt="Shock Compression Research" style="width: 100%; max-width: 1000px">
-</div>
+    .hero-photo {
+        flex: 0 0 140px;
+    }
 
-<hr>
-<section>
-    <h2>Autobiography</h2>
-    <p>
-        My name is Kenneth Mikolaichik, a Texas native born 1990.
-        I grew up in Austin the youngest of three and only boy, son of a chemist and a seamstress.
-        I developed a knack for repairing everyday things at a young age.
-        Ever hungry for more knowledge and spurred on by a desire to live comfortably, I attended the Liberal Arts and Science Academy High School in Austin.
-        After High School I worked a plethora of temporary and remedial positions looking for my place in society.
-        I attended ITT Tech in pursuit of an electrical engineering degree where I made the Deans list several times.
-        While still attending online, I joined the US Navy and received training as an aircraft mechanic in Pensacola Florida where I achieved top of my class and class leader.
-        I received an award and was promoted immediately to E-4. Not long after this ITT Tech was shut down by the Board of Education, I decided to enroll in Embry-Riddle and start all over again.
-        Within two years of my enlistment date I was promoted to E-5 wherein I became the second shift supervisor of ten F-18 Superhornets for the airframes shop of VFA-151.
-        Upon exiting my military contact I resided in California for 2 years restoring dead and abandoned F-18’s that had not flown in years to pristine flight ready condition.
-        It was around this time that I completed an associates in aeronautics from Embry Riddle.
-        Missing my family, and longing for those Texas sunsets, I moved to San Antonio - Military City USA.
-        I worked for Northrop Grumman for a year and a half as a level III structural mechanic. Still I felt I could contribute to something more,
-        so I decided to pursue a physics degree at the University of Texas and seriously investigate new approaches to lift and automated robotic systems.
-		I worked and volunteered my time for two and a half years in Dr Xuan Zhou’s Optics lab within the Physics Department performing spectroscopic analysis of nanomaterials under high pressure.
-        In 2025 I graduated with honors. I then formed Mikolaichik Solutions LLC, my own engineering and scientific solutions company. I am also currently looking for work as a scientist or engineer.
+        .hero-photo img {
+            width: 140px;
+            height: 140px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 3px solid rgba(0, 0, 0, 0.08);
+        }
 
-    </p>
+    .hero-main {
+        flex: 1 1 260px;
+    }
 
+    .hero-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
 
-    <footer style="background: #333;color: white; padding: 20px; text-align: center; border-radius: 50px; width: 50%; margin: 20px auto;">
-        <h2>Contact</h2>
-        <a href="https://www.linkedin.com/in/kenneth-mikolaichik"
-           style="display: inline-block; background: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-            Contact me via LinkedIn
-        </a>
-        <div style="margin-top: 15px;">
-            <img src="assets/img/IMG_1348.jpg" alt="Contact Image 1" style="width: 200px; border-radius: 20px;">
+    .hero-tagline {
+        font-size: 0.98rem;
+        margin-bottom: 0.5rem;
+        color: #444;
+    }
+
+    .hero-role {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #17406b;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+        .hero-links a {
+            font-size: 0.9rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--accent);
+            color: white;
+            background: var(--accent);
+            text-decoration: none;
+        }
+
+            .hero-links a.secondary {
+                background: transparent;
+                color: #17406b;
+                border-color: #17406b;
+            }
+
+    /* SECTION TITLES */
+
+    .section-title {
+        margin: 2rem 0 0.75rem 0;
+        font-size: 1.35rem;
+        font-weight: 650;
+    }
+
+    /* PROJECT ROWS */
+
+    .project-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1.2rem 1rem;
+        margin-bottom: 1.2rem;
+        border-radius: 14px;
+        border: 1px solid var(--border-soft);
+        background: var(--bg-soft);
+    }
+
+    .project-image {
+        flex: 0 0 220px;
+        max-width: 260px;
+    }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+        }
+
+    .project-body {
+        flex: 1 1 260px;
+    }
+
+        .project-body h3 {
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .project-body .project-tagline {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body ul {
+            margin-top: 0.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-body a.project-link {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+    /* BIO */
+
+    .bio-section {
+        margin: 2.5rem 0 1.5rem 0;
+        padding: 1.5rem 1.2rem;
+        border-radius: 14px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+    }
+
+        .bio-section h2 {
+            margin-top: 0;
+        }
+
+    .bio-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .bio-main {
+        flex: 1 1 260px;
+    }
+
+    .bio-photo {
+        flex: 0 0 220px;
+        max-width: 260px;
+    }
+
+        .bio-photo img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+        }
+
+    /* SMALL SCREENS */
+
+    @media (max-width: 768px) {
+        .hero {
+            text-align: left;
+        }
+
+        .project-row {
+            flex-direction: column;
+        }
+
+        .project-image,
+        .bio-photo {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<div class="hero">
+    <div class="hero-photo">
+        <!-- TODO: replace with your actual headshot path -->
+        <img src="assets/IMG_1348.jpg">
+
+    </div>
+    <div class="hero-main">
+        <div class="hero-name">Kenneth Mikolaichik</div>
+        <div class="hero-role">Applied Physics &amp; Test Engineer · Optics · Lab Systems · Veteran</div>
+        <div class="hero-links">
+            <a href="https://www.linkedin.com/in/kenneth-mikolaichik/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="secondary" href="https://mikolaichiksolutions.com" target="_blank" rel="noopener">Mikolaichik Solutions</a>
         </div>
-    </footer>
-</html>    
+    </div>
+</div>
+
+<div class="section-title">Prior Work</div>
+
+<div class="project-row">
+    <div class="project-image">
+        <!-- Optics / lab image -->
+        <img src="assets/20250813_123743.jpg" alt="Optical spectroscopy platform">
+    </div>
+    <div class="project-body">
+        <h3>Shock-Compressed GaAs Spectroscopy Platform</h3>
+        <div class="project-tagline">Raman / SERS / fluorescence spectroscopy for high-pressure materials.</div>
+        <ul>
+            <li>Built and aligned a complete optical test platform for probing structural changes in GaAs under shock compression.</li>
+            <li>Designed sample handling, calibration routines, and repeatable measurement procedures.</li>
+            <li>Generated data used in a peer-reviewed paper on shock-compressed GaAs.</li>
+        </ul>
+        <a class="project-link" href="https://pubs.aip.org/aip/adv/article/15/3/035203/3338106" target="_blank" rel="noopener">AIP Publishing</a>
+    </div>
+</div>
+
+<div class="project-row">
+    <div class="project-image">
+        <!-- Product / curved rod photo -->
+        <img src="assets/curtain.jpg" alt="Curved curtain rod installation">
+    </div>
+    <div class="project-body">
+        <h3>Arched and Irregular Curtain Rod System</h3>
+        <div class="project-tagline">Product engineering and small-batch manufacturing under Mikolaichik Solutions.</div>
+        <ul>
+            <li>Designed a hardware solution for non-standard arched windows.</li>
+            <li>Iterated geometry and tolerances for clean installation, structural integrity, and manufacturability.</li>
+            <li>Implemented packaging, installation documentation, and a How to Video.</li>
+        </ul>
+        <a class="project-link" href="https://mikolaichiksolutions.com" target="_blank" rel="noopener">MikolaichikSolutions.com</a>
+    </div>
+</div>
+
+<div class="project-row">
+    <div class="project-image">
+        <!-- Robotics / Regis photo -->
+        <img src="assets/1.jpg" alt="Quadruped robot prototype">
+    </div>
+    <div class="project-body">
+        <h3>Quadruped Robot “Regis”</h3>
+        <div class="project-tagline">Sandbox for robotics, gait, and mechanical design.</div>
+        <ul>
+            <li>Designed and built a quadruped robot as a platform for motion, control, and sensing experiments.</li>
+            <li>Integrated structure, servos, control electronics, and power distribution into a maintainable layout.</li>
+            <li>Used the platform to explore gait stability, robustness, and field-serviceability of legged systems.</li>
+        </ul>
+        <a class="project-link" href="https://github.com/kennethmikolaichik/Regis" target="_blank" rel="noopener">Code &amp; projects on GitHub</a>
+    </div>
+</div>
+
+<div class="project-row">
+    <div class="project-image">
+        <!-- Aviation photo (F/A-18, flight line, maintenance, etc.) -->
+        <img src="assets/20151019_133406.jpg" alt="F/A-18 maintenance and systems work">
+    </div>
+    <div class="project-body">
+        <h3>Aviation Systems & Veteran Maintainer</h3>
+        <div class="project-tagline">8 years working on F/A-18 aircraft systems in Navy & defense industry.</div>
+        <ul>
+            <li>Performed structural, mechanical, electrical, and hydraulic system troubleshooting on F/A-18 Super Hornets.</li>
+            <li>Led teams in safety-critical repairs, inspections, and system readiness checks under military QA protocols.</li>
+            <li>Applied engineering discipline, documentation accuracy, and procedural rigor in high-stakes environments.</li>
+        </ul>
+        <a class="project-link" href="https://www.facebook.com/VFA151/" target="_blank" rel="noopener">Navy VFA-151</a>
+    </div>
+</div>
+
+
+<div class="section-title">Publications &amp; Media</div>
+<p>
+    Mikolaichik, K., Zhou, X., et al. (2025). Probing structural alterations in shock-compressed GaAs.
+    *AIP Advances, 15*(3), 035203.
+    <a class="project-link" href="https://pubs.aip.org/aip/adv/article/15/3/035203/3338106" target="_blank" rel="noopener">https://pubs.aip.org/aip/adv/article/15/3/035203/3338106</a>
+</p>
+<p>
+    K. Mikolaichik, “The Right Stuff,” Approach Magazine, vol. 61, no. 3, 2016.
+    <a class="project-link" href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/" target="_blank" rel="noopener">https://navalsafetycommand.navy.mil/media/mags-pubs/approach/</a>
+</p>
+
+
+<div class="bio-section" id="contact">
+    <h2>Bio</h2>
+    <div class="bio-layout">
+        <div class="bio-main">
+            <p>
+                I’m a Texas-based Applied Physics &amp; Test Engineer with a background in aircraft systems,
+                experimental optics, hydraulics, and electronics.
+            </p>
+            <p>
+                After 8 years working on F/A-18 aircraft in the U.S. Navy and defense industry, I earned a B.S. in
+                Physics from UTSA, where I worked in Dr. Xuan Zhou’s optics lab on spectroscopy of nanomaterials under
+                high pressure. I now run Mikolaichik Solutions LLC, a small engineering and scientific solutions
+                company focused on practical hardware and experimental systems.
+            </p>
+            <p>
+                I enjoy designing, building, testing, and iterating on physical systems – whether that’s an optical
+                setup, a robotics platform, or a piece of hardware that solves a real-world problem.
+            </p>
+
+        </div>
+        <div class="bio-photo">
+            <!-- Optional secondary photo (lab / workshop) -->
+            <img src="assets/IMG_2012.JPG" alt="Lab or workshop photo">
+        </div>
+    </div>
+</div>
