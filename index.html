@@ -191,6 +191,42 @@
             max-width: 100%;
         }
     }
+
+    /* Photo Gallery */
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .gallery-card {
+        border: 1px solid var(--border-soft);
+        background: var(--bg-soft);
+        border-radius: 14px;
+        padding: 0.8rem;
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .gallery-card img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .gallery-card h3 {
+            margin: 0.7rem 0 0.25rem 0;
+            font-size: 1rem;
+        }
+
+        .gallery-card p {
+            font-size: 0.88rem;
+            color: #555;
+            margin: 0;
+        }
 </style>
 
 <div class="hero">
@@ -200,7 +236,8 @@
     </div>
     <div class="hero-main">
         <div class="hero-name">Kenneth Mikolaichik</div>
-        <div class="hero-role">Applied Physics &amp; Test Engineer · Optics · Lab Systems · Veteran</div>
+        <div class="hero-role">Applied Physics · Optical Systems · Product Development</div>
+        <div class="hero-role">Active Secret Clearance</div>
         <div class="hero-links">
             <a href="https://www.linkedin.com/in/kenneth-mikolaichik/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="secondary" href="https://mikolaichiksolutions.com" target="_blank" rel="noopener">Mikolaichik Solutions</a>
@@ -212,7 +249,7 @@
 
 <div class="project-row">
     <div class="project-image">
-        <!-- Optics / lab image -->
+        <!-- Optics / Spectroscopy -->
         <img src="assets/20250813_123743.jpg" alt="Optical spectroscopy platform">
     </div>
     <div class="project-body">
@@ -224,6 +261,22 @@
             <li>Generated data used in a peer-reviewed papers.</li>
         </ul>
         <a class="project-link" href="https://pubs.aip.org/aip/adv/article/15/3/035203/3338106" target="_blank" rel="noopener">AIP Publishing</a>
+    </div>
+</div>
+
+<div class="project-row">
+    <!-- Extruder photo -->
+    <div class="project-image">
+        <img src="assets/extruder.jpg" alt="Plastic extrusion machine">
+    </div>
+    <div class="project-body">
+        <h3>Plastic Extruder Development</h3>
+        <div class="project-tagline">Custom thermoplastic extrusion system for prototype manufacturing.</div>
+        <ul>
+            <li>Designed and built a small-scale plastic extrusion machine for processing thermoplastic material.</li>
+            <li>Integrated mechanical drive, thermal control, material feed, and custom fabricated components.</li>
+            <li>Used the project to explore manufacturability, process control, and low-cost production tooling.</li>
+        </ul>
     </div>
 </div>
 
@@ -241,6 +294,25 @@
             <li>Created manufacturing process and tooling, installation documentation, and a How to Video.</li>
         </ul>
         <a class="project-link" href="https://mikolaichiksolutions.com/Home/ArchedCurtainRod" target="_blank" rel="noopener">MikolaichikSolutions.com</a>
+    </div>
+</div>
+
+<div class="project-row">
+    <!-- High Voltage Test Enclosure -->
+    <div class="project-image">
+        <img src="assets/HV_Test.jpg" alt="High Voltage Test Enclosure">
+    </div>
+    <div class="project-body">
+        <h3>High Voltage Test Enclosure</h3>
+        <div class="project-tagline">Electrically safe faraday cage for exploring experimental research.</div>
+        <ul>
+            <li>
+                Designed and constructed high-voltage experimental systems for investigating corona discharge, electric field
+                distribution, and electrohydrodynamic effects.
+            </li>
+            <li>Integrated high voltage power supplies, secondary grounds, custom test fixtures, and power electronics.</li>
+            <li>Used the project to explore experimental high voltage propulsion systems composites and nanomaterials.</li>
+        </ul>
     </div>
 </div>
 
@@ -278,8 +350,64 @@
     </div>
 </div>
 
+<div class="section-title">CAD Portfolio</div>
+
+<p>
+    7+ Years CAD & Rapid Prototyping Experience.
+</p>
+
+<p>
+    CAD and additive manufacturing have been a core part of my engineering workflow since 2017.
+    I have used FreeCAD extensively for product development, laboratory hardware, robotics, tooling, and prototype fabrication.
+    My designs have been manufactured through 3D printing, machining, sheet metal fabrication, and commercial product production.
+
+</p>
+
+
+<div class="gallery-grid">
+
+    <!-- Chevy S10 Tablet radio -->
+    <a class="gallery-card" href="cad/Tablet_Bezel.stl" target="_blank" rel="noopener">
+        <img src="assets/Tablet_Bezel.jpg" alt="Chevy S-10 Dash Tablet Bezel">
+        <h3>Bezel for S-10 Dashboard</h3>
+        <p>Replaced radio with a Samsung Tablet on my Classic 94 Chevy S-10.</p>
+    </a>
+
+    <!-- Teardrop EM exploration -->
+    <a class="gallery-card" href="cad/high_field_geometry.stl" target="_blank" rel="noopener">
+        <img src="assets/high_field_geometry.jpg" alt="High EM Geometry">
+        <h3>High EM field Geometry</h3>
+        <p>Developed geometric morphology for exploring electromagnetic properties along a single axis.</p>
+    </a>
+
+    <!-- Laboratory fixture for channeling light -->
+    <a class="gallery-card" href="cad/light_shield_complete.stl" target="_blank" rel="noopener">
+        <img src="assets/light_shield.jpg" alt="Laboratory custom solution">
+        <h3>Light Channel</h3>
+        <p>Designed and 3D printed a custom laboratory solution for the main optical test platform.</p>
+    </a>
+
+    <!-- Quadbot Core -->
+    <a class="gallery-card" href="cad/quadbot_core.FCStd" target="_blank" rel="noopener">
+        <img src="assets/quadbot_core.jpg" alt="Quadbot Core">
+        <h3>Quadbot Core Chasis</h3>
+        <p>Designed, printed, and iterated on quadbot chasis for walking robot.</p>
+    </a>
+
+    <!-- Quadbot Leg -->
+    <a class="gallery-card" href="cad/quadbot_leg.FCStd" target="_blank" rel="noopener">
+        <img src="assets/leg.jpg" alt="Quadbot Leg">
+        <h3>Quadbot Leg</h3>
+        <p>Designed, printed, and iterated on quadbot leg for walking robot.</p>
+    </a>
+
+</div>
+
 
 <div class="section-title">Publications &amp; Media</div>
+<p>
+    U.S. Provisional Patent #65/857,749. Industrial Hand Tool.
+</p>
 <p>
     Kade Johnson; Kenneth Mikolaichik; David J. Gosztola; Gary P. Wiederrecht; Richard D. Schaller; Xuan Zhou (2025). Pressure-Induced Stacking of Rhodamine 6G Molecules.
     ACS Publications.
@@ -301,18 +429,21 @@
     <div class="bio-layout">
         <div class="bio-main">
             <p>
-                I’m a Texas-based Applied Physics &amp; Test Engineer with a background in aircraft systems,
+                I’m an Applied Physics and R&D Engineer with a background in aircraft systems,
                 experimental optics, hydraulics, and electronics.
             </p>
             <p>
-                After 8 years working on F/A-18 aircraft in the U.S. Navy and defense industry, I earned a B.S. in
-                Physics from UTSA, where I worked in Dr. Xuan Zhou’s optics lab on spectroscopy of nanomaterials under
-                high pressure. I now run Mikolaichik Solutions LLC, a small engineering and scientific solutions
-                company focused on practical hardware and experimental systems. I am currently investigating high 
-                voltage test setups and self organization of nanomaterials via acoustic and electric field.
+                After 8 years working on F/A-18 aircraft in the U.S. Navy and defense industry, I earned a technical
+                degree in Electrical Engineering, an AS in Aeronautical Science, and a BS in Physics. During my
+                time at the University of Texas I worked in Dr. Xuan Zhou’s optics lab on spectroscopy of nanomaterials under
+                high pressure, which resulted in several publications and custom engineered solutions. I now operate
+                Mikolaichik Solutions LLC, a small engineering and scientific company focused on product
+                development, advanced composite materials, and high field electronics.
             </p>
             <p>
-                I enjoy designing, building, testing, and iterating on physical systems that solve real-world problems.
+                I enjoy conceptualizing solutions to problems on the drawing board, validating them through calculation,
+                and then engineering, sourcing, and assembling the physical hardware.
+                I like the challenge, creativity, and spirit of collaboration involved in determining the best path forward.
             </p>
 
         </div>
