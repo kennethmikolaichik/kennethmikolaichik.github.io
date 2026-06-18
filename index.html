@@ -227,6 +227,62 @@
             color: #555;
             margin: 0;
         }
+/* Education & Media */
+    .section {
+        margin: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
+
+    .edu-card,
+    .pub-card {
+        background: #ffffff;
+        border-left: 5px solid #3498db;
+        padding: 20px;
+        margin-bottom: 18px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease;
+    }
+
+        .edu-card:hover,
+        .pub-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .edu-card h3 {
+            margin: 0;
+            color: #222;
+        }
+
+    .school {
+        font-size: 1.05rem;
+        color: #3498db;
+        margin-top: 4px;
+    }
+
+    .date {
+        margin-top: 8px;
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    .pub-card a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #3498db;
+    }
+
+        .pub-card a:hover {
+            text-decoration: underline;
+        }
 </style>
 
 <div class="hero">
@@ -245,7 +301,7 @@
     </div>
 </div>
 
-<div class="section-title">Prior Work</div>
+<div><h2>Prior Work</h2></div>
 
 <div class="project-row">
     <div class="project-image">
@@ -311,7 +367,7 @@
                 distribution, and electrohydrodynamic effects.
             </li>
             <li>Integrated high voltage power supplies, secondary grounds, custom test fixtures, and power electronics.</li>
-            <li>Used the project to explore experimental high voltage propulsion systems composites and nanomaterials.</li>
+            <li>Used the project to explore experimental high voltage propulsion systems, composites, and nanomaterials.</li>
         </ul>
     </div>
 </div>
@@ -350,7 +406,7 @@
     </div>
 </div>
 
-<div class="section-title">CAD Portfolio</div>
+<div><h2>CAD Portfolio</h2></div>
 
 <p>
     7+ Years CAD & Rapid Prototyping Experience.
@@ -403,53 +459,92 @@
 
 </div>
 
+<section id="education" class="section">
+    <h2>Education</h2>
 
-<div class="section-title">Publications &amp; Media</div>
-<p>
-    U.S. Provisional Patent #65/857,749. Industrial Hand Tool.
-</p>
-<p>
-    Kade Johnson; Kenneth Mikolaichik; David J. Gosztola; Gary P. Wiederrecht; Richard D. Schaller; Xuan Zhou (2025). Pressure-Induced Stacking of Rhodamine 6G Molecules.
-    ACS Publications.
-    <a class="project-link" href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c07019" target="_blank" rel="noopener">https://pubs.acs.org/doi/10.1021/acs.jpcc.5c07019</a>
-</p>
-<p>
-    Mikolaichik, K., Zhou, X., et al. (2025). Probing structural alterations in shock-compressed GaAs.
-    AIP Advances.
-    <a class="project-link" href="https://pubs.aip.org/aip/adv/article/15/3/035203/3338106" target="_blank" rel="noopener">https://pubs.aip.org/aip/adv/article/15/3/035203/3338106</a>
-</p>
-<p>
-    K. Mikolaichik, “The Right Stuff,” Approach Magazine, vol. 61, no. 3, 2016.
-    <a class="project-link" href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/" target="_blank" rel="noopener">https://navalsafetycommand.navy.mil/media/mags-pubs/approach/</a>
-</p>
-
-
-<div class="bio-section" id="contact">
-    <h2>Bio</h2>
-    <div class="bio-layout">
-        <div class="bio-main">
-            <p>
-                I’m an Applied Physics and R&D Engineer with a background in aircraft systems,
-                experimental optics, hydraulics, and electronics.
-            </p>
-            <p>
-                After 8 years working on F/A-18 aircraft in the U.S. Navy and defense industry, I earned a technical
-                degree in Electrical Engineering, an AS in Aeronautical Science, and a BS in Physics. During my
-                time at the University of Texas I worked in Dr. Xuan Zhou’s optics lab on spectroscopy of nanomaterials under
-                high pressure, which resulted in several publications and custom engineered solutions. I now operate
-                Mikolaichik Solutions LLC, a small engineering and scientific company focused on product
-                development, advanced composite materials, and high field electronics.
-            </p>
-            <p>
-                I enjoy conceptualizing solutions to problems on the drawing board, validating them through calculation,
-                and then engineering, sourcing, and assembling the physical hardware.
-                I like the challenge, creativity, and spirit of collaboration involved in determining the best path forward.
-            </p>
-
+        <div class="edu-card">
+            <h3>Bachelor of Science in Physics</h3>
+            <div class="school">The University of Texas at San Antonio</div>
+            <div class="date">Graduated May 2025 • Cum Laude</div>
         </div>
-        <div class="bio-photo">
-            <!-- (lab / workshop) -->
-            <img src="assets/IMG_2012.JPG" alt="Lab or workshop photo">
+
+        <div class="edu-card">
+            <h3>Associate of Science in Aeronautics</h3>
+            <div class="school">Embry-Riddle Aeronautical University</div>
+            <div class="date">Graduated May 2019</div>
         </div>
-    </div>
-</div>
+
+        <div class="edu-card">
+            <h3>Associate of Science in Electrical Engineering</h3>
+            <div class="school">ITT Technical Institute</div>
+            <div class="date">Graduated May 2017</div>
+        </div>
+        </section>
+
+<section id="publications" class="section">
+    <h2>Publications & Media</h2>
+
+        <div class="pub-card">
+            <strong>U.S. Provisional Patent #65/857,749</strong><br>
+            Industrial Hand Tool
+        </div>
+
+        <div class="pub-card">
+            <strong>Pressure-Induced Stacking of Rhodamine 6G Molecules</strong><br>
+            Kade Johnson; Kenneth Mikolaichik; David J. Gosztola;
+            Gary P. Wiederrecht; Richard D. Schaller; Xuan Zhou (2025)
+            <br>
+            <a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c07019" target="_blank">
+                View Publication →
+            </a>
+        </div>
+
+        <div class="pub-card">
+            <strong>Probing Structural Alterations in Shock-Compressed GaAs</strong><br>
+            Mikolaichik, K., Zhou, X., et al. (2025)
+            <br>
+            <a href="https://pubs.aip.org/aip/adv/article/15/3/035203/3338106" target="_blank">
+                View Publication →
+            </a>
+        </div>
+
+        <div class="pub-card">
+            <strong>The Right Stuff</strong><br>
+            Approach Magazine, Vol. 61, No. 3 (2016)
+            <br>
+            <a href="https://navalsafetycommand.navy.mil/media/mags-pubs/approach/" target="_blank">
+                View Article →
+            </a>
+        </div>
+    </section>
+
+
+        <div class="bio-section" id="contact">
+            <h2>Bio</h2>
+            <div class="bio-layout">
+                <div class="bio-main">
+                    <p>
+                        I’m an Applied Physics and R&D Engineer with a background in aircraft systems,
+                        experimental optics, hydraulics, and electronics.
+                    </p>
+                    <p>
+                        After 8 years working on F/A-18 aircraft in the U.S. Navy and defense industry, I earned a technical
+                        degree in Electrical Engineering, an AS in Aeronautical Science, and a BS in Physics. During my
+                        time at the University of Texas I worked in Dr. Xuan Zhou’s optics lab on spectroscopy of nanomaterials under
+                        high pressure, which resulted in several publications and custom engineered solutions. I now operate
+                        Mikolaichik Solutions LLC, a small engineering and scientific company focused on product
+                        development, advanced composite materials, and high field electronics.
+                    </p>
+                    <p>
+                        I enjoy conceptualizing solutions to problems on the drawing board, validating them through calculation,
+                        and then engineering, sourcing, and assembling the physical hardware.
+                        I like the challenge, creativity, and spirit of collaboration involved in determining the best path forward.
+                    </p>
+
+                </div>
+                <div class="bio-photo">
+                    <!-- (lab / workshop) -->
+                    <img src="assets/IMG_2012.JPG" alt="Lab or workshop photo">
+                </div>
+            </div>
+        </div>
